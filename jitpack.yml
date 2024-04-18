@@ -5,4 +5,4 @@ before_install:
   - ./scripts/prepareJitpackEnvironment.sh
 install:
   - FILE="-Dfile=mylibrarytoast-release.aar"
-  - mvn install:install-file $FILE -DgroupId=com.github.ct-rambabut -DartifactId=SDKsample -Dversion=1.0.8 -Dpackaging=aar -DgeneratePom=true
+  - mvn install:install-file $FILE -DgroupId=com.github.ct-rambabut -DartifactId=SDKsample -Dversion=1.2 -Dpackaging=aar -DgeneratePom=true

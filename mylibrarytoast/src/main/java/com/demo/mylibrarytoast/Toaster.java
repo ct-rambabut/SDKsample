@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class Toaster {
     public static void simpleToast(Context context, String msg){
-        Toast.makeText(context,msg+"  with version 2.0",Toast.LENGTH_SHORT).show();
+        Toast.makeText(context,msg+"  with version 2.1",Toast.LENGTH_SHORT).show();
     }
 
 }

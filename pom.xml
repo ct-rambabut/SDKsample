@@ -1,122 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>com.github.ct-rambabut</groupId>
-		<artifactId>SDKsample</artifactId>
-		<version>3.0.0</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.poc.lib</groupId>
-	<artifactId>poc-retry</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>poc-retry</name>
-	<description>Demo project for Spring Boot</description>
-	<properties>
-		<java.version>17</java.version>
-		<awaitility.version>4.2.0</awaitility.version>
-		<junit.version>5.10.2</junit.version>
-		<spotless.version>2.43.0</spotless.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>com.github.ct-rambabut</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.github.ct-rambabut</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.github.ct-rambabut</groupId>
-			<artifactId>spring-boot-starter-aop</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.awaitility</groupId>
-			<artifactId>awaitility-groovy</artifactId>
-			<version>${awaitility.version}</version>
-		</dependency>
-
-		<!-- Test Dependencies -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.jayway.jsonpath</groupId>
-			<artifactId>json-path</artifactId>
-			<version>${json-path.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>${junit.version}</version>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven-compiler-plugin.version}</version>
-				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.diffplug.spotless</groupId>
-				<artifactId>spotless-maven-plugin</artifactId>
-				<version>${spotless.version}</version>
-				<configuration>
-					<java>
-						<eclipse>
-
-						</eclipse>
-						<indent>
-							<tabs>true</tabs>
-							<spacesPerTab>2</spacesPerTab>
-						</indent>
-						<indent>
-							<spaces>true</spaces>
-							<spacesPerTab>2</spacesPerTab>
-						</indent>
-						<removeUnusedImports />
-					</java>
-				</configuration>
-				<executions>
-					<execution>
-						<id>java-formatter</id>
-						<goals>
-							<goal>check</goal>
-						</goals>
-						<phase>validate</phase>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <!-- Project coordinates -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.ct-rambabut</groupId>
+    <artifactId>SDKsample</artifactId>
+    <version>3.0.0</version>
+    <packaging>jar</packaging>
+    
+    <!-- Project metadata -->
+    <name>My Artifact</name>
+    <description>This is a description of my artifact.</description>
+    
+    <!-- License information -->
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    
+    <!-- Developer information -->
+    <developers>
+        <developer>
+            <name>Your Name</name>
+            <email>your.email@example.com</email>
+        </developer>
+    </developers>
+    
+    <!-- Source code repository -->
+    <scm>
+        <connection>scm:git:https://github.com/yourusername/your-repository.git</connection>
+        <developerConnection>scm:git:https://github.com/ct-rambabut/SDKsample.git</developerConnection>
+        <url>https://github.com/ct-rambabut/SDKsample</url>
+    </scm>
+    
+    <!-- Distribution management for Sonatype -->
+    
 
 	<distributionManagement>
 		<repository>
@@ -125,5 +46,17 @@
 			<url>https://maven.pkg.github.com/ct-rambabut/SDKsample</url>
 		</repository>
 	</distributionManagement>
-
+    
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- Add your dependencies here -->
+    </dependencies>
+    
+    <!-- Build configuration -->
+    <build>
+        <plugins>
+            <!-- Add any necessary build plugins here -->
+        </plugins>
+    </build>
+    
 </project>
